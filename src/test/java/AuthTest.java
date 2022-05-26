@@ -23,7 +23,7 @@ public class AuthTest {
         $("[aria-label='View profile and more']").click();
         //7. Нажать на профиль
         $(byText("Your profile")).click();
-        //5. Проверить профиль
+        //8. Проверить профиль
         $("[class='vcard-names ']").shouldBe(Condition.visible);
     }
 }
