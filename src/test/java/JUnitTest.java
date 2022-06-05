@@ -11,6 +11,7 @@ import java.util.stream.Stream;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.sleep;
 import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 public class JUnitTest {
@@ -54,7 +55,7 @@ public class JUnitTest {
         TestPages.JUnitPage.releaseSearch()
                 .sendKeys(searchData + Keys.ENTER);
         TestPages.JUnitPage.releasesBlock()
-                .shouldBe(visible);
+                .shouldHave(text(searchResults));
     }
 
     static Stream<Arguments> searchBy() {
@@ -62,19 +63,20 @@ public class JUnitTest {
                 arguments(
                         "фрагмету из цифр",
                         "4.13",
-                        "2"
+                        "6"
                 ),
 
                 arguments(
                         "фрагмету из букв",
                         "RC",
-                        "Beta"
+                        "2"
+
                 ),
 
                 arguments(
                         "полному названию",
                         "JUnit 4.13 RC 2",
-                        "JUnit 4.11"
+                        "1"
                 )
         );
     }
