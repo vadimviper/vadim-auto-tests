@@ -49,11 +49,11 @@ public class JUnitTest {
                 .shouldBe(visible);
         TestPages.JUnitPage.releaseButton()
                 .click();
-        TestPages.JUnitPage.releasesPageCheck()
+        TestPages.JUnitPage.releasesPage()
                 .shouldBe(visible);
         TestPages.JUnitPage.releaseSearch()
                 .sendKeys(searchData + Keys.ENTER);
-        TestPages.JUnitPage.checkBlock()
+        TestPages.JUnitPage.releasesBlock()
                 .shouldBe(visible);
     }
 
