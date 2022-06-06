@@ -63,20 +63,20 @@ public class JUnitTest {
                 arguments(
                         "фрагмету из цифр",
                         "4.13",
-                        "6"
+                        "JUnit 4.13"
                 ),
 
                 arguments(
                         "фрагмету из букв",
                         "RC",
-                        "2"
+                        "JUnit 4.13 RC"
 
                 ),
 
                 arguments(
                         "полному названию",
                         "JUnit 4.13 RC 2",
-                        "1"
+                        "JUnit 4.13 RC 2"
                 )
         );
     }
