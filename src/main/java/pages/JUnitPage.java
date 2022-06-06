@@ -38,6 +38,6 @@ public class JUnitPage {
         return  $(".js-selected-navigation-item.selected.subnav-item").as("страница 'Релизы'");
     }
     public SelenideElement releasesBlock() {
-        return $(".clearfix.container-xl.px-3.px-md-4.px-lg-5.mt-4").as("блок результата");
+        return $(".Box-body").as("блок результата");
     }
 }
