@@ -40,13 +40,22 @@ public class AuthTest {
         TestPages.mainPage.loginButton()
                 .click();
         });
-        step("Авторизация прошла успешно", () -> {
+
+        step("Проверить, что верхний баннер отображается", () -> {
         TestPages.mainPage.headerBanner()
                 .shouldBe(visible);
+        });
+
+
+        step("Открыть дропдаун и кликнуть на кнопку 'Your profile'", () -> {
         TestPages.mainPage.dropdownButton()
                 .click();
         TestPages.mainPage.yourProfileButton()
                 .click();
+        });
+
+
+        step("Проверить, что отображается заголовок с именем", () -> {
         TestPages.mainPage.headerName()
                 .shouldBe(visible);
     });
